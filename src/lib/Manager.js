@@ -6,7 +6,7 @@ class Manager extends Employee {
 
     super(name, id, email)
     
-    this.office = office
+    this.office = parseInt(office)
   }
 
   getRole() {
