@@ -16,6 +16,13 @@ describe('Employee', () => {
       expect('email' in employee).toBe(true)
       expect(employee.email).toEqual('john.test@example.com')
     })
+
+    it('should not be initialized with an office number', () => {
+      const employee = new Employee('John Test', 12, 'john.test@example.com', 221)
+
+      expect('office' in employee).toBe(false)
+      expect(employee.office).toBe(undefined)
+    })
     
     it('should thow an error if any of the required arguments are missing or are of the incorrect type', () => {
       expect(() => new Employee('', 12, 'john.test@example.com')).toThrow(new Error('A string name is required.'))
