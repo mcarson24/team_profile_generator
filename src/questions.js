@@ -4,22 +4,22 @@ const recursive = require('inquirer-recursive')
 inquirer.registerPrompt('recursive', recursive)
 
 const questions = [
-  // {
-  //   name: 'manager.name',
-  //   message: 'Enter the manager\'s name',
-  // },
-  // {
-  //   name: 'manager.id',
-  //   message: 'Enter the manager\'s id',
-  // },
-  // {
-  //   name: 'manager.email',
-  //   message: 'Enter the manager\'s email address',
-  // },
-  // {
-  //   name: 'manager.office',
-  //   message: 'Enter the manager\'s office number'
-  // },
+  {
+    name: 'manager.name',
+    message: 'Enter the manager\'s name',
+  },
+  {
+    name: 'manager.id',
+    message: 'Enter the manager\'s id',
+  },
+  {
+    name: 'manager.email',
+    message: 'Enter the manager\'s email address',
+  },
+  {
+    name: 'manager.office',
+    message: 'Enter the manager\'s office number'
+  },
   {
     name: 'employees',
     type: 'checkbox',
