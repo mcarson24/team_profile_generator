@@ -17,6 +17,12 @@ describe('Intern', () => {
       expect('office' in intern).toBe(false)
       expect(intern.office).toBe(undefined)
     })
+
+    it('should throw an error if the school name is missing or is not a string', () => {
+      expect(() => new Intern('Bill Test', 45, 'bill.test@example.com')).toThrow(new Error('A school name of type string is required.'))
+      // expect(() => new Intern('Bill Test', 45, 'bill.test@example.com', '   ')).toThrow(new Error('A school name of type string is required.'))
+      expect(() => new Intern('Bill Test', 45, 'bill.test@example.com', false)).toThrow(new Error('A school name of type string is required.'))
+    })
   })
   describe('getSchool', () => {
     it('should return the name of the intern\'s school', () => {

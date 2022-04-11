@@ -11,6 +11,12 @@ describe('Manager', () => {
       expect(manager.id).toEqual(22)
       expect(manager.email).toEqual('steve.test@example.com')
     })
+
+    it('should throw an error if the office number is missing or is not of type integer', () => {
+      expect(() => new Manager('Manny Manager', 33, 'manny.manager@example.com')).toThrow(new Error('An office number of type integer is required.'))
+      expect(() => new Manager('Manny Manager', 33, 'manny.manager@example.com', '    ')).toThrow(new Error('An office number of type integer is required.'))
+      expect(() => new Manager('Manny Manager', 33, 'manny.manager@example.com', -22)).toThrow(new Error('An office number of type integer is required.'))
+    })
   })
   describe('getRole', () => {
     it('should return a role of \'Manager\'', () => {
