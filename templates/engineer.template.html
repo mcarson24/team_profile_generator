@@ -1,0 +1,21 @@
+<div id="card" class="rounded-lg bg-pink-500 overflow-hidden drop-shadow-md">
+  <header class="bg-white px-4 py-2">
+    <h2 class="text-4xl text-cyan-600">{{ name }}</h2>
+    <h3 class="text-2xl text-cyan-800">{{ employee_type }}</h3>
+  </header>
+  <div class="px-4 py-2">
+    <p class="text-slate-800"> 
+      <span class="text-cyan-800">id </span>
+      {{ id }}
+    </p>
+    <p class="text-slate-800">
+      <span class="text-cyan-800">email </span>
+      <a href="mailto:matthew.carson@pm.me">{{ email }}</a>
+    </p>
+    <!-- This bit is only for engineers -->
+    <p class="text-slate-800">
+      <span class="text-cyan-800">Github </span>
+      <a href="https://github.com/{{ github }}">{{ github }}</a>
+    </p>
+  </div>
+</div>
