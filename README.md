@@ -15,7 +15,7 @@ A simple and easy-to-use package to create a profile page for a engineering team
 
 ![A screenshot of the generated team profile page.](./src/assets/screenshot.png)
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jaGsyA1g2Nc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Walkthrough video on Youtube](https://youtu.be/jaGsyA1g2Nc)
 
 ## License
 
