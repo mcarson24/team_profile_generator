@@ -9,27 +9,27 @@ const Builder = require('./src/lib/Builder.js')
 
 inquirer.prompt(questions)
   .then(answers => {
-    const objects = []
+    const team_members = []
     // Create the manager
     const {name, id, email, office} = answers.manager
-    objects.push(new Manager(name, id, email, office))
+    team_members.push(new Manager(name, id, email, office))
     // Create the engineer(s)
     if (answers.employees.includes('Engineer')) {
       answers.engineers.forEach(engineer => {
         const {name, id, email, github} = engineer
-        objects.push(new Engineer(name, id, email, github))
+        team_members.push(new Engineer(name, id, email, github))
       });
     }
     // Create the intern(s)
     if (answers.employees.includes('Intern')) {
       answers.interns.forEach(intern => {
         const {name, id, email, school} = intern
-        objects.push(new Intern(name, id, email, school))
+        team_members.push(new Intern(name, id, email, school))
       })
     }
     // TODO: Render each card
     let template = ''
-    objects.forEach(employee => {
+    team_members.forEach(employee => {
       const builder = new Builder(employee)
       template += builder.renderTemplate()
     })
